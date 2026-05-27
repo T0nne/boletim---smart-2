@@ -1,0 +1,31 @@
+meu-boletim-v2/
+├── 📄 COMECE_AQUI.md          ← Leia primeiro
+├── 📄 SETUP_VSCODE.md
+├── 📄 ARQUIVOS_ENTREGUES.md
+├── 📄 01_ANALISE_PROFISSIONAL.md
+├── 📄 02_GUIA_REFATORACAO_COMPLETO.md
+│
+└── src/
+    ├── index.html
+    ├── README.md
+    │
+    ├── css/
+    │   ├── theme.css          ✅ PRONTO
+    │   ├── components.css     ✅ PRONTO
+    │   ├── layout.css         ✅ PRONTO
+    │   ├── animations.css     ✅ PRONTO
+    │   └── responsive.css     ✅ PRONTO
+    │
+    └── js/
+        ├── constants.js       ✅ PRONTO
+        ├── utils.js           ✅ PRONTO (50+ funções)
+        ├── state.js           ✅ PRONTO
+        ├── storage.js         ✅ PRONTO
+        ├── api.js             ✅ PRONTO
+        ├── ui.js              ✅ PRONTO
+        ├── app.js             🔲 Template
+        ├── dashboard.js       🔲 Template
+        ├── subjects.js        🔲 Template
+        ├── agenda.js          🔲 Template
+        ├── chat.js            🔲 Template
+        └── config.js          🔲 Template

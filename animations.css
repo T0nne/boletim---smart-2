@@ -1,0 +1,463 @@
+/**
+ * ANIMATIONS.CSS
+ * Keyframes, transições e micro-interações
+ * Cria uma sensação polida e responsiva
+ */
+
+/* ═══════════════════════════════════
+   FADE ANIMATIONS
+   ═══════════════════════════════════ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-base);
+}
+
+.fade-out {
+  animation: fadeOut var(--transition-base);
+}
+
+/* ═══════════════════════════════════
+   SLIDE ANIMATIONS
+   ═══════════════════════════════════ */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp var(--transition-base);
+}
+
+.slide-in-down {
+  animation: slideInDown var(--transition-base);
+}
+
+.slide-in-left {
+  animation: slideInLeft var(--transition-base);
+}
+
+.slide-in-right {
+  animation: slideInRight var(--transition-base);
+}
+
+/* ═══════════════════════════════════
+   SCALE ANIMATIONS
+   ═══════════════════════════════════ */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.scale-in {
+  animation: scaleIn var(--transition-base);
+}
+
+.hover-scale:hover {
+  animation: scaleUp var(--transition-fast) forwards;
+}
+
+/* ═══════════════════════════════════
+   LOADING & SPINNER
+   ═══════════════════════════════════ */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.bounce-dot {
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.loading-skeleton {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 0%,
+    var(--bg-secondary) 50%,
+    var(--bg-tertiary) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* ═══════════════════════════════════
+   PULSE ANIMATIONS
+   ═══════════════════════════════════ */
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.3s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════
+   FLOAT ANIMATION
+   ═══════════════════════════════════ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════
+   SHAKE ANIMATION
+   ═══════════════════════════════════ */
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* ═══════════════════════════════════
+   PROGRESS ANIMATION
+   ═══════════════════════════════════ */
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-animate {
+  animation: progress 2s ease-in-out;
+}
+
+/* ═══════════════════════════════════
+   TEXT ANIMATIONS
+   ═══════════════════════════════════ */
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+}
+
+.fade-in-text {
+  animation: fadeInText var(--transition-slow);
+}
+
+/* ═══════════════════════════════════
+   GRADIENT ANIMATION
+   ═══════════════════════════════════ */
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-flow {
+  background-size: 200% 200%;
+  animation: gradientFlow 3s ease infinite;
+}
+
+/* ═══════════════════════════════════
+   INTERACTIVE TRANSITIONS
+   ═══════════════════════════════════ */
+
+button,
+a,
+.btn,
+.clickable {
+  transition: all var(--transition-fast);
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ═══════════════════════════════════
+   INPUT TRANSITIONS
+   ═══════════════════════════════════ */
+
+input,
+textarea,
+select,
+.form-input,
+.form-select,
+.form-textarea {
+  transition: all var(--transition-fast);
+  
+  &:focus {
+    transform: scale(1.01);
+  }
+}
+
+/* ═══════════════════════════════════
+   CARD HOVER EFFECTS
+   ═══════════════════════════════════ */
+
+.card,
+.subject-card,
+.prova-card,
+.tarefa-card {
+  transition: all var(--transition-base);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* ═══════════════════════════════════
+   SCROLL REVEAL ANIMATION
+   ═══════════════════════════════════ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all var(--transition-base);
+  
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═══════════════════════════════════
+   STAGGER ANIMATION (para listas)
+   ═══════════════════════════════════ */
+
+.stagger-item {
+  opacity: 0;
+  animation: slideInUp var(--transition-base);
+  
+  @for $i from 0 to 10 {
+    &:nth-child(#{$i + 1}) {
+      animation-delay: #{$i * 50}ms;
+    }
+  }
+}
+
+/* Fallback sem SASS */
+.stagger-item {
+  animation: slideInUp var(--transition-base);
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0ms; opacity: 1; }
+.stagger-item:nth-child(2) { animation-delay: 50ms; opacity: 1; }
+.stagger-item:nth-child(3) { animation-delay: 100ms; opacity: 1; }
+.stagger-item:nth-child(4) { animation-delay: 150ms; opacity: 1; }
+.stagger-item:nth-child(5) { animation-delay: 200ms; opacity: 1; }
+
+/* ═══════════════════════════════════
+   ACCESSIBILITY: Respeitar preferências
+   ═══════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ═══════════════════════════════════
+   DARK MODE SPECIFIC
+   ═══════════════════════════════════ */
+
+html[data-theme="dark"] {
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] {
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ═══════════════════════════════════
+   TRANSITION UTILITIES
+   ═══════════════════════════════════ */
+
+.transition-fast { transition: all var(--transition-fast); }
+.transition-base { transition: all var(--transition-base); }
+.transition-slow { transition: all var(--transition-slow); }
+
+.no-transition { transition: none; }
+
+/* ═══════════════════════════════════
+   TRANSFORM UTILITIES
+   ═══════════════════════════════════ */
+
+.rotate-90 { transform: rotate(90deg); }
+.rotate-180 { transform: rotate(180deg); }
+.scale-105 { transform: scale(1.05); }
+.scale-110 { transform: scale(1.1); }
+
+/* ═══════════════════════════════════
+   OPACITY UTILITIES
+   ═══════════════════════════════════ */
+
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
